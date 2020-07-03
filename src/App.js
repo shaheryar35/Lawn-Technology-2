@@ -1,25 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import {UserForm} from './signup/userForm';
+import {signIn} from './singInComponent/signIn';
+import SimpleBottomNavigation from './NavBarComponent/NavBar';
+import {homeComp} from './HomeComponent/homeComp';
+import {Services} from './AddServiceComponent/Service';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+   
+    <BrowserRouter>
+    
+    <Switch>
+    <Route path='/signup'  component={UserForm} />
+    <Route path='/navbar' component={SimpleBottomNavigation} />
+    <Route path='/home' component={homeComp} />
+    <Route path='/add_new_service' component={Services} />
+
+    <Route path='/' component={signIn}  />
+   
+   
+ </Switch>
+ 
+</BrowserRouter>
+
+    
   );
 }
 

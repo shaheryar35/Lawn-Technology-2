@@ -1,0 +1,12 @@
+.button-text{
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+}
+.plus{
+    color: seagreen;
+}
+.form-labels{
+    display: flex;
+    justify-content: center;
+}
