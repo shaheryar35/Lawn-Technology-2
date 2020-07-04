@@ -3,13 +3,13 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import Container from '@material-ui/core/Container';
-import styles from './AddNewService.module.css';
+import styles from './AddNewPackage.module.css';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 
 
-export class AddNewService extends Component {
+export class AddNewPackage extends Component {
     constructor(props){
         super(props);
         this.state ={
@@ -30,7 +30,7 @@ export class AddNewService extends Component {
             <>
            
         <Container className={styles['container']} component="main" maxWidth="xs">
-        <h2 className={styles['title']}> Add New Service  </h2>
+        <h2 className={styles['title']}> Add New Package  </h2>
         <div onClick={this.handleToShowForm}>
          <Card>
              <CardActionArea>
@@ -51,7 +51,7 @@ export class AddNewService extends Component {
         <Container className={styles['container-Form']} component="main" maxWidth="xs">
         <Typography variant="h6" className={styles['form-labels']} gutterBottom>
                 <br/>
-    Service Details
+    Package Details
   </Typography>
   <Grid container spacing={3}>
     
@@ -60,7 +60,7 @@ export class AddNewService extends Component {
         required
         id="servicename"
         name="servicename"
-        label="Service Name"
+        label="Package Name"
         fullWidth
        
       />
@@ -69,7 +69,7 @@ export class AddNewService extends Component {
       <TextField
         id="address"
         name="address"
-        label="Address"
+        label="Description"
         fullWidth
         multiline
         
@@ -98,18 +98,8 @@ export class AddNewService extends Component {
         type="number"
       />
     </Grid>
-    <Grid item xs={12} sm={6}>
-      <TextField
-        required
-        id="country"
-        name="country"
-        label="Country"
-        fullWidth
-        autoComplete="country"
-      />
-    </Grid>
     
-      
+    
   </Grid>
         </Container>
         :
@@ -125,4 +115,4 @@ export class AddNewService extends Component {
     }
 }
 
-export default AddNewService
+export default AddNewPackage
