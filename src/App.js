@@ -7,6 +7,7 @@ import {signIn} from './singInComponent/signIn';
 import SimpleBottomNavigation from './NavBarComponent/NavBar';
 import {homeComp} from './HomeComponent/homeComp';
 import {Services} from './AddServiceComponent/Service';
+import {ServiceDetails} from './ServiceDetailsComponent/ServiceDetails';
 import { createBrowserHistory } from "history";
 export class App extends Component
  {
@@ -25,6 +26,7 @@ export class App extends Component
       <Route path='/navbar' component={SimpleBottomNavigation} />
       <Route path='/home' component={homeComp} />
       <Route path='/add_new_service' component={Services} />
+      <Route path='/service_details' component={ServiceDetails} />
   
       <Route path='/' component={signIn}  />
      

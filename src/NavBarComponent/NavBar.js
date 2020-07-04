@@ -41,7 +41,7 @@ const useStyles = makeStyles({
     <Link to="/"><div className={styles['logo']}><img  className={styles.logo} alt='app Logo' /></div></Link>
     <BottomNavigationAction  label="Home" icon={<HomeIcon />} component={Link} to='/home' /> 
     <BottomNavigationAction label="Add Service/Package" icon={<AddToQueueIcon />} component={Link} to='/add_new_service' />
-    <BottomNavigationAction label="Add Package" icon={<AddBoxIcon/>} component={Link} to='/add_new_package' />
+    <BottomNavigationAction label="Service Details" icon={<AddBoxIcon/>} component={Link} to='/service_details' />
     
     
      </BottomNavigation>
