@@ -2,11 +2,6 @@ import React, { Component } from 'react';
 import {FormUserDetails} from './FormUserDetails';
 import {FormPassword} from './FormPassword';
 
-
-
-
-
-
 export class UserForm extends Component {
 
     state={
@@ -15,14 +10,14 @@ export class UserForm extends Component {
         email:'',
         password:''
     }
-    //proceed to next step
+ 
     nextstep=() =>{
         const {step}= this.state;
         this.setState({
             step: step+1
         });
     }
-    //proceed to previous step
+  
     prevstep=() =>{
         const {step}= this.state;
         this.setState({

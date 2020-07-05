@@ -15,6 +15,7 @@ import styles from './FormPassword.module.css';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import {Link} from 'react-router-dom';
+import leafLogo from '../assets/downloadF.png';
 
 export class FormPassword extends Component {
   continue = e=>{
@@ -29,13 +30,20 @@ export class FormPassword extends Component {
   render() {
     const {values,handleChange}= this.props;
     return (
+      <>
+      
       <Container className={styles['container']} component="main" maxWidth="xs">
+      <div className={styles['logo']}><img  src={leafLogo} />  
+       </div>
+       <div className={styles['logo-title']}> it's Quick and Easy! 
+       </div>
+
       <Card>
         <CardContent>
       <div>
         
-        <Typography component="h1"  variant="h5">
-        Now, create your password
+      <Typography component="h3" className={styles['title-text']}  variant="h9">
+             Now Create your Password!
           
         </Typography>
         <br/>
@@ -98,6 +106,7 @@ export class FormPassword extends Component {
     
       
     </Container>
+    </>
     )
   }
 }

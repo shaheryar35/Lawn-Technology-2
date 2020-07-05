@@ -15,6 +15,7 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import {Link} from 'react-router-dom';
 import { withRouter } from "react-router-dom";
+import leafLogo from '../assets/downloadF.png';
 
 
 export class  signIn extends Component {
@@ -50,12 +51,16 @@ export class  signIn extends Component {
     
     return (
       <Container className={styles['container']} component="main" maxWidth="xs">
+        <div className={styles['logo']}><img  src={leafLogo} />  
+       </div>
+       <div className={styles['logo-title']}> it's Quick and Easy! 
+       </div>
       <Card>
         <CardContent>
       <div>
         
-        <Typography component="h1"  variant="h5">
-          Sign In
+      <Typography component="h3" className={styles['title-text']}  variant="h9">
+             Enter Email Address & Password
           
         </Typography>
         <br/>
@@ -112,7 +117,7 @@ export class  signIn extends Component {
             onClick={this.handleSubmit}
             
           >
-            Done
+            Next
           </Button>
           <br/>
           <Grid container justify="flex-end">

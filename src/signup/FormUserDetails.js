@@ -15,6 +15,7 @@ import styles from './FormUser.module.css';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import {Link} from 'react-router-dom';
+import leafLogo from '../assets/downloadF.png';
 
 export class FormUserDetails extends Component {
   continue = e=>{
@@ -26,13 +27,16 @@ export class FormUserDetails extends Component {
     return (
       
       <Container className={styles['container']} component="main" maxWidth="xs">
-     
+      <div className={styles['logo']}><img  src={leafLogo} /> 
+        </div>
+        <div className={styles['logo-title']}> it's Quick and Easy! </div>
       <Card>
         <CardContent>
       <div>
         
-        <Typography component="h1"  variant="h5">
-          Sign Up
+    
+        <Typography component="h3" className={styles['title-text']}  variant="h9">
+             Type your name & email address
           
         </Typography>
         <br/>
