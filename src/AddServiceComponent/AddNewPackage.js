@@ -14,11 +14,24 @@ export class AddNewPackage extends Component {
     constructor(props){
         super(props);
         this.state ={
-            showForm:false
+            showForm:false,
+            active:false,
+            actives_econd:false
         };
         this.handleToShowForm = this.handleToShowForm.bind(this);
+        this.makeItActive = this.makeItActive.bind(this);
+        this.makeItActive2 = this.makeItActive2.bind(this);
     };
-
+    makeItActive=()=>{
+      this.setState(prevState => ({
+          active: !prevState.active
+        }));
+  }
+  makeItActive2=()=>{
+    this.setState(prevState => ({
+      actives_econd: !prevState.actives_econd
+      }));
+}
     handleToShowForm(e){
       console.log("hy")
 
@@ -27,6 +40,8 @@ export class AddNewPackage extends Component {
       }
 
     render() {
+      const style = this.state.active ? { border: '2px solid rgba(137, 43, 226, 0.931)' } : {};
+      const style_second = this.state.actives_econd ? { border: '2px solid rgba(137, 43, 226, 0.931)' } : {};
         return (
             <>
            
@@ -82,11 +97,71 @@ export class AddNewPackage extends Component {
     <Grid item xs={12}>
     <Typography className={styles['form-labels']} variant="h6" gutterBottom>
                 
+       Select Service
+  </Typography>
+
+    </Grid>   
+    <Grid item xs={12} sm={6}>
+    <Card className={styles['card']} onClick={this.makeItActive} style={style}>
+                      <CardActionArea>
+                          <CardContent>
+                             <div className={styles['package-title']}>
+                                LAWN TEK
+                             </div>
+                                <div className={styles['price']}>
+                                $200.00/mo / 200 Sq. ft.
+                                </div>
+                                <hr />
+                                <ul className={styles['list']}>
+                                    <li>Fifth</li>
+                                     <li>Fifth</li>
+                                    <li>Second</li>
+                                    <li>Third</li>
+                                    <li>Third</li>
+                                    <li>Third</li>
+                                    <li>Third</li>
+                                </ul>
+                          </CardContent>
+                      </CardActionArea>
+                  </Card>
+
+
+
+
+    </Grid>
+    <Grid item xs={12} sm={6}>
+    <Card className={styles['card']} onClick={this.makeItActive2} style={style_second}>
+                      <CardActionArea>
+                          <CardContent>
+                             <div className={styles['package-title']}>
+                                LAWN TEK
+                             </div>
+                                <div className={styles['price']}>
+                                $200.00/mo / 200 Sq. ft.
+                                </div>
+                                <hr />
+                                <ul className={styles['list']}>
+                                    <li>Fifth</li>
+                                     <li>Fifth</li>
+                                    <li>Second</li>
+                                    <li>Third</li>
+                                    <li>Third</li>
+                                    <li>Third</li>
+                                    <li>Third</li>
+                                </ul>
+                          </CardContent>
+                      </CardActionArea>
+                  </Card>
+    </Grid>
+
+
+    <Grid item xs={12}>
+    <Typography className={styles['form-labels']} variant="h6" gutterBottom>
+                
        Set Your Prices
   </Typography>
 
-    </Grid>
-    
+    </Grid> 
     <Grid item xs={12} sm={6}>
       <TextField id="setprice" name="setprice" label="Minimum $:" fullWidth
     type="number"
