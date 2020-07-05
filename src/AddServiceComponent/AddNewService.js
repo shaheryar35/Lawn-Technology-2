@@ -8,6 +8,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import CardItem from './ServiceCardItem';
 
 
 export class AddNewService extends Component {
@@ -30,8 +31,12 @@ export class AddNewService extends Component {
         return (
             <>
            
-        <Container className={styles['container']} component="main" maxWidth="xs">
-        <h2 className={styles['title']}> Add New Service  </h2>
+       { !this.state.showForm ? 
+       <div >
+        
+         <Grid container>
+            <Grid item md={3}>
+            {/* <h2 className={styles['title']}> Add New Service  </h2> */}
         <div onClick={this.handleToShowForm}>
          <Card>
              <CardActionArea>
@@ -47,7 +52,12 @@ export class AddNewService extends Component {
              </CardActionArea>
          </Card>
          </div>
-         </Container>
+            </Grid>
+            <CardItem/>
+
+         </Grid> 
+         </div>
+         : null}
          { this.state.showForm ? 
         
         <Container className={styles['container-Form']} component="main" maxWidth="xs">
@@ -97,7 +107,7 @@ export class AddNewService extends Component {
         required
         id="price_per_sequar"
         name="price_per_sequar"
-        label="Price Per Sequar"
+        label="Price Per Square"
         fullWidth
         type="number"
       />
@@ -112,7 +122,7 @@ export class AddNewService extends Component {
             fullWidth
             variant="contained"
             color="primary"
-            
+            onClick={()=> this.setState({showForm: !this.state.showForm})}
           >
              Submit
           </Button>

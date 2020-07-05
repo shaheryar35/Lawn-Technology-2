@@ -30,27 +30,30 @@ export class AddNewPackage extends Component {
   render() {
     return (
       <>
+      {!this.state.showForm ?
         <Container
-          className={styles["container"]}
-          component="main"
-          maxWidth="xs"
-        >
-          <h2 className={styles["title"]}> Add New Package </h2>
-          <div onClick={this.handleToShowForm}>
-            <Card>
-              <CardActionArea>
-                <CardContent>
-                  <div className={styles["button-text"]}>
-                    <i
-                      class={`fa fa-plus fa-3x ${styles["plus"]}`}
-                      aria-hidden="true"
-                    ></i>
-                  </div>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          </div>
-        </Container>
+        className={styles["container"]}
+        component="main"
+        maxWidth="xs"
+      >
+        <h2 className={styles["title"]}> Add New Package </h2>
+        <div onClick={this.handleToShowForm}>
+          <Card>
+            <CardActionArea>
+              <CardContent>
+                <div className={styles["button-text"]}>
+                  <i
+                    class={`fa fa-plus fa-3x ${styles["plus"]}`}
+                    aria-hidden="true"
+                  ></i>
+                </div>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </div>
+      </Container> : null
+    }
+        
         {this.state.showForm ? (
           <Container
             // className={styles["container-Form"]}
