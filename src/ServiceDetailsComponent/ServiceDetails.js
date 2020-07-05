@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Container, Typography, TablePagination } from "@material-ui/core";
+
 import SimpleBottomNavigation from '../NavBarComponent/NavBar';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
@@ -29,8 +31,11 @@ export class ServiceDetails extends Component {
       }
     render() {
         return (
-            <>
-                <SimpleBottomNavigation />
+            <div>
+
+           
+            <SimpleBottomNavigation />
+            <Container>
                 <br/>
               
               <BottomNavigation
@@ -43,15 +48,15 @@ export class ServiceDetails extends Component {
           <BottomNavigationAction label="All Products" icon={<LocalOfferIcon />}  />
        
     </BottomNavigation>
-
     {    this.state.showPackage ? 
           <ShowPackagesDetails />
           :
           <div></div>
-
+          
         }
+        </Container>
             
-            </>
+            </div>
         )
     }
 }
