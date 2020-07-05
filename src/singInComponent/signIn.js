@@ -101,13 +101,7 @@ export class  signIn extends Component {
                    
                </div>
 
-            }
-                 
-            
-          
-            
-         
-            
+            }      
             <br/>
           <Button
             type="submit"

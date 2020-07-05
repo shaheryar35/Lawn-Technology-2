@@ -7,6 +7,7 @@ import styles from './AddNewPackage.module.css';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 
 export class AddNewPackage extends Component {
@@ -49,6 +50,9 @@ export class AddNewPackage extends Component {
          </Container>
          { this.state.showForm ? 
         <Container className={styles['container-Form']} component="main" maxWidth="xs">
+        <br/>
+  <Card>
+    <CardContent>
         <Typography variant="h6" className={styles['form-labels']} gutterBottom>
                 <br/>
     Package Details
@@ -69,7 +73,7 @@ export class AddNewPackage extends Component {
       <TextField
         id="address"
         name="address"
-        label="Description"
+        label=" Optional Description"
         fullWidth
         multiline
         
@@ -98,9 +102,20 @@ export class AddNewPackage extends Component {
         type="number"
       />
     </Grid>
-    
-    
+
   </Grid>
+  <br/>
+  <Button
+            type="submit"
+            fullWidth
+            variant="contained"
+            color="primary"
+            
+          >
+             Submit
+          </Button>
+  </CardContent>
+  </Card>
         </Container>
         :
         <div></div> 

@@ -31,7 +31,7 @@ export class ServiceDetails extends Component {
       }
     render() {
         return (
-            <div>
+            <div className={styles['service']}>
 
            
             <SimpleBottomNavigation />
