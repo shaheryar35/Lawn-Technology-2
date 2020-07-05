@@ -32,17 +32,16 @@ export class ShowPackagesDetails extends Component {
                                 LAWN TEK
                              </div>
                                 <div className={styles['price']}>
-                                $200.00/mo / 200 Sq. ft.
+                                $200.00/mo
                                 </div>
                                 <hr />
                                 <ul className={styles['list']}>
-                                    <li>Fifth</li>
-                                     <li>Fifth</li>
-                                    <li>Second</li>
-                                    <li>Third</li>
-                                    <li>Third</li>
-                                    <li>Third</li>
-                                    <li>Third</li>
+                                    <li><i class={`fa fa-check-circle ${styles['tick-circle']}`} aria-hidden="true"></i> Guarantee Profitability </li>
+                                    
+                                    <li><i class={`fa fa-check-circle ${styles['tick-circle']}`} aria-hidden="true"></i> Fifth</li>
+                                    <li><i class={`fa fa-check-circle ${styles['tick-circle']}`} aria-hidden="true"></i> Fifth</li>
+                                    <li><i class={`fa fa-check-circle ${styles['tick-circle']}`} aria-hidden="true"></i> Fifth</li>
+                                   
                                 </ul>
                           </CardContent>
                       </CardActionArea>
