@@ -7,6 +7,7 @@ import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import PlaylistAddIcon from '@material-ui/icons/PlaylistAdd';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import styles from './Service.module.css';
+
 export class Services extends Component {
     constructor(props){
         super(props);
@@ -39,22 +40,31 @@ export class Services extends Component {
           })
       }
     render() {
+       
+         
         return (
-            <>
+            <div className={styles['services']}>
          <SimpleBottomNavigation />
          <br/>
          <h2 className={styles['title']}> Choose Option Between Them!  </h2>
      
-    <BottomNavigation
+   
+       
+    <BottomNavigation 
             value={this.state.value}
              onChange={this.handleChange}
              showLabels
-      
+            
             >
-          <BottomNavigationAction label="New Service" icon={<PlaylistAddIcon />} onClick={this.showAddButtonService} />
-          <BottomNavigationAction label="New Package" icon={<LocalOfferIcon />} onClick={this.showAddButtonPackage} />
+                
+                 <BottomNavigationAction label="New Service" icon={<PlaylistAddIcon />} onClick={this.showAddButtonService} />
+                <BottomNavigationAction label="New Package" icon={<LocalOfferIcon />} onClick={this.showAddButtonPackage} />
+                 
+          
        
     </BottomNavigation>
+    
+    
       
 
        {
@@ -72,7 +82,7 @@ export class Services extends Component {
        }
         
    
-            </>
+            </div>
         )
     }
 }

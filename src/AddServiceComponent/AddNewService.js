@@ -7,6 +7,7 @@ import styles from './AddNewService.module.css';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 
 export class AddNewService extends Component {
@@ -48,8 +49,12 @@ export class AddNewService extends Component {
          </div>
          </Container>
          { this.state.showForm ? 
+        
         <Container className={styles['container-Form']} component="main" maxWidth="xs">
-        <Typography variant="h6" className={styles['form-labels']} gutterBottom>
+       <br/>
+  <Card>
+    <CardContent>
+    <Typography variant="h6" className={styles['form-labels']} gutterBottom>
                 <br/>
     Service Details
   </Typography>
@@ -67,12 +72,11 @@ export class AddNewService extends Component {
     </Grid>
     <Grid item xs={12}>
       <TextField
-        id="address"
-        name="address"
-        label="Address"
+        id="description"
+        name="description"
+        label="Option Description"
         fullWidth
         multiline
-        
       />
     </Grid>
     <Grid item xs={12}>
@@ -98,28 +102,28 @@ export class AddNewService extends Component {
         type="number"
       />
     </Grid>
-    <Grid item xs={12} sm={6}>
-      <TextField
-        required
-        id="country"
-        name="country"
-        label="Country"
-        fullWidth
-        autoComplete="country"
-      />
-    </Grid>
+     
     
       
   </Grid>
+  <br/>
+  <Button
+            type="submit"
+            fullWidth
+            variant="contained"
+            color="primary"
+            
+          >
+             Submit
+          </Button>
+  </CardContent>
+  </Card>
         </Container>
         :
         <div></div> 
-        
-        
-        
+ 
         }
-
-             
+   
             </>
         )
     }

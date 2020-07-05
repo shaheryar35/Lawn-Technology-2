@@ -14,12 +14,15 @@ export class App extends Component
    constructor(props){
      super(props);
      this.state={
-      history: createBrowserHistory()
+      history: createBrowserHistory(),
+      
      }
    }
    render(){
     return ( 
+      
       <BrowserRouter>
+      
       <Switch>
         
       <Route path='/signup'  component={UserForm} />
@@ -33,7 +36,9 @@ export class App extends Component
      
    </Switch>
    
+   
   </BrowserRouter>
+
   
       
     );

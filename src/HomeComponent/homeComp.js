@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import SimpleBottomNavigation from '../NavBarComponent/NavBar';
-
+import styles from './home.module.css';
 
 export class homeComp extends Component {
     
     render() {
         return (
-            <div>
+            <div className={styles['home']}>
                 <SimpleBottomNavigation />
                 <h1>Home Component</h1>
      
